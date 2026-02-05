@@ -11,7 +11,19 @@
 </head>
 
 <body background="../kabe-blue.gif">
-<bgsound src="../mp3/aa.mp3" loop="infinite">
+<audio id="bgm" src="../mp3/aa.mp3" autoplay loop muted></audio>
+
+<script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('bgm');
+    // ほんの少し遅らせてミュート解除
+    setTimeout(() => {
+      audio.muted = false;
+    }, 300);
+  });
+</script>
+
+
 
 <table border="1" width="346" height="343">
   <tbody>
@@ -237,4 +249,5 @@
 </body>
 
 </html>
+
 
